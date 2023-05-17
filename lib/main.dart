@@ -20,6 +20,16 @@ class MyApp extends StatelessWidget {
   }
 
   Widget myLayout() {
-    return const Text("Painel de Mensagens");
+    return const Padding(
+        padding: EdgeInsets.all(50.0),
+        child: Center(
+          child: Text(
+            "Painel de Mensagens",
+            style: TextStyle(
+              color: Colors.red,
+              fontSize: 30,
+            ),
+          ),
+        ));
   }
 }
