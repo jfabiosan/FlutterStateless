@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
             child: Text('Olá Mundo!',
                 textDirection: TextDirection.ltr,
                 style: TextStyle(
-                  fontSize: 32,
+                  fontSize: 30,
                   color: Color.fromARGB(255, 218, 58, 58),
                 )),
           ),
