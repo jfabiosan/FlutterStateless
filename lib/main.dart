@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: const Text("Cronstruindo Layouts"),
+          title: const Center(child: Text("Cronstruindo Layouts")),
         ),
         body: myLayout(),
       ),
@@ -20,16 +20,25 @@ class MyApp extends StatelessWidget {
   }
 
   Widget myLayout() {
-    return const Padding(
-        padding: EdgeInsets.all(50.0),
-        child: Center(
-          child: Text(
-            "Painel de Mensagens",
-            style: TextStyle(
-              color: Colors.red,
-              fontSize: 30,
-            ),
+    return Center(
+      child: Container(
+        margin: const EdgeInsets.all(30.0),
+        padding: const EdgeInsets.all(30.0),
+        alignment: Alignment.center,
+        width: 300,
+        height: 100,
+        decoration: BoxDecoration(
+          color: Colors.green,
+          border: Border.all(),
+        ),
+        child: const Text(
+          "Olá, Flutter",
+          style: TextStyle(
+            fontSize: 30,
+            fontStyle: FontStyle.italic,
           ),
-        ));
+        ),
+      ),
+    );
   }
 }
