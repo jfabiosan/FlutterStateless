@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
         padding: const EdgeInsets.all(30.0),
         alignment: Alignment.center,
         width: 300,
-        height: 100,
+        height: 99,
         decoration: BoxDecoration(
           color: Colors.green,
           border: Border.all(),
