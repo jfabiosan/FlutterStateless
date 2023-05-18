@@ -2,34 +2,28 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
 
-// o widget raiz da app
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
+  const MyApp({Key? key}) : super(key: key);
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: const Text("Cronstruindo Layouts"),
+          title: const Text('Flutter Layouts'),
         ),
-        body: myLayout(),
+        body: const Column(children: [
+          Center(
+            heightFactor: 2,
+            child: Text('Olá Mundo!',
+                textDirection: TextDirection.ltr,
+                style: TextStyle(
+                  fontSize: 32,
+                  color: Colors.black,
+                )),
+          ),
+        ]),
       ),
     );
-  }
-
-  Widget myLayout() {
-    return const Padding(
-        padding: EdgeInsets.all(50.0),
-        child: Center(
-          child: Text(
-            "Painel de Mensagens",
-            style: TextStyle(
-              color: Colors.red,
-              fontSize: 30,
-            ),
-          ),
-        ));
   }
 }
