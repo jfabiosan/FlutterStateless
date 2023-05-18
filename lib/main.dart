@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
                 textDirection: TextDirection.ltr,
                 style: TextStyle(
                   fontSize: 32,
-                  color: Colors.black,
+                  color: Color.fromARGB(255, 218, 58, 58),
                 )),
           ),
         ]),
