@@ -29,8 +29,9 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         title: const Text('Bem vindo'),
       ),
-      body: Text('Voçê pressionou o botão $valor vezes.'),
+      body: Text('Clique para adicionar ou remover. Total inserido $valor.'),
       floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
         children: [
           FloatingActionButton(
             onPressed: click,
