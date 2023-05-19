@@ -15,6 +15,14 @@ class _HomeState extends State<Home> {
     });
   }
 
+  void menos() {
+    setState(() {
+      if (valor > 0) {
+        valor--;
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,9 +30,17 @@ class _HomeState extends State<Home> {
         title: const Text('Bem vindo'),
       ),
       body: Text('Voçê pressionou o botão $valor vezes.'),
-      floatingActionButton: FloatingActionButton(
-        onPressed: click,
-        child: const Icon(Icons.add),
+      floatingActionButton: Row(
+        children: [
+          FloatingActionButton(
+            onPressed: click,
+            child: const Icon(Icons.add),
+          ),
+          FloatingActionButton(
+            onPressed: menos,
+            child: const Icon(Icons.remove),
+          ),
+        ],
       ),
     );
   }
